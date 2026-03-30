@@ -38,3 +38,9 @@
 
 ## Access Token
 - 永久记住(有风险): git config --global credential.helper store
+
+## 强制拉取
+- 强制覆盖本地修改: git fetch --all && git reset --hard origin/<branch-name>
+- 拉取上游更新: git fetch upstream
+    - 后续做法1--强制重置为和原作者一模一样（最干净）: git reset --hard upstream/main
+    - 后续做法2--合并原作者的更新到你的代码中（保留你的修改）: git merge upstream/main
